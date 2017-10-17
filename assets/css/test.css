@@ -38,6 +38,10 @@ ul.nav li.active a{
 border-bottom: 2px solid #000;
 }
 
+ul.nav li#sidebar-toggle{
+float: right;    
+}
+
 .content{
 width: 70%;
 float: left;
@@ -47,8 +51,20 @@ min-height: 500px;
 .sidebar{
 width: 30%;
 float: left;   
-min-height: 500px;
-background: blue;
+max-height: 0px;
+opacity: 0;
+transition: all .3s ease-out;
+padding: 20px 0;
+}
+
+.sidebar div{
+padding: 20px;
+background: #fafafa;
+}
+
+.sidebar.open{
+max-height: auto;
+opacity: 1;
 }
 
 .container{
